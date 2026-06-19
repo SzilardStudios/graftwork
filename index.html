@@ -154,6 +154,84 @@
     font-size: 0.85rem;
   }
 
+  /* ── HOW-TO ACCORDION ── */
+  .howto-wrap {
+    background: var(--navy2);
+    border-bottom: 1px solid var(--rule);
+    padding: 0 5%;
+  }
+  .howto-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 18px 0;
+    color: var(--muted);
+    font-family: var(--ff-body);
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+    width: 100%;
+    text-align: left;
+  }
+  .howto-toggle:hover { color: var(--white); }
+  .howto-toggle svg {
+    width: 16px; height: 16px;
+    stroke: currentColor; fill: none; stroke-width: 2;
+    flex-shrink: 0;
+    transition: transform 0.25s;
+  }
+  .howto-toggle.open { color: var(--white); }
+  .howto-toggle.open svg { transform: rotate(180deg); }
+  .howto-body {
+    display: none;
+    padding: 4px 0 28px;
+  }
+  .howto-body.open { display: block; }
+  .howto-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  .howto-step {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .howto-num {
+    font-family: var(--ff-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--amber);
+    line-height: 1;
+    min-width: 24px;
+    padding-top: 2px;
+  }
+  .howto-step h5 {
+    font-family: var(--ff-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 4px;
+    letter-spacing: 0.02em;
+  }
+  .howto-step p {
+    font-size: 0.83rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .howto-note {
+    font-size: 0.8rem;
+    color: var(--muted);
+    border-left: 2px solid var(--rule);
+    padding-left: 12px;
+    line-height: 1.6;
+  }
+
   /* ── SECTION WRAPPER ── */
   section { padding: 72px 5%; }
   .section-label {
@@ -396,6 +474,55 @@
   </div>
 </div>
 
+<!-- HOW TO USE GOOGLE SHEETS -->
+<div class="howto-wrap">
+  <button class="howto-toggle" onclick="this.classList.toggle('open'); document.getElementById('howto-body').classList.toggle('open');" aria-expanded="false">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+    How to use a Google Sheets template
+    <svg viewBox="0 0 24 24" style="margin-left:auto"><path d="M6 9l6 6 6-6"/></svg>
+  </button>
+  <div class="howto-body" id="howto-body">
+    <div class="howto-steps">
+      <div class="howto-step">
+        <span class="howto-num">1</span>
+        <div>
+          <h5>Purchase &amp; download</h5>
+          <p>After buying on Gumroad, you'll receive a download link. Save the file to your computer — it'll be a <strong>.xlsx</strong> file.</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <span class="howto-num">2</span>
+        <div>
+          <h5>Open Google Sheets</h5>
+          <p>Go to <strong>sheets.google.com</strong> in your browser. Sign in with any Google account — Gmail counts. It's completely free.</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <span class="howto-num">3</span>
+        <div>
+          <h5>Upload the file</h5>
+          <p>Click <strong>File → Import</strong>, then drag in the downloaded file. Choose "Replace spreadsheet" and click Import.</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <span class="howto-num">4</span>
+        <div>
+          <h5>Make it yours</h5>
+          <p>Add your company name, logo, or tweak any field. Use the <strong>unlocked version</strong> included in your download to customise freely. Don't want to do it yourself? <a href="#contact" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--amber);">Contact us</a> — tell us what you need and we'll do it for you, for a small fee.</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <span class="howto-num">5</span>
+        <div>
+          <h5>Share with your team</h5>
+          <p>Hit the <strong>Share</strong> button in the top-right corner. Add your team by email, or copy a link — they can view or edit from any device.</p>
+        </div>
+      </div>
+    </div>
+    <p class="howto-note">No Google account? You can also open the .xlsx file directly in Microsoft Excel or LibreOffice if you prefer.</p>
+  </div>
+</div>
+
 <!-- PRODUCTS -->
 <section class="products" id="products">
   <p class="section-label">Products</p>
@@ -410,27 +537,47 @@
       <p>Track planned servicing, breakdowns, and inspections in one clean sheet. Dropdown menus, auto-totals, print-ready. Includes a protected version and a fully unlocked version to customise.</p>
       <div class="product-footer">
         <span class="product-price"><sup>£</sup>12</span>
-        <a href="https://graftwork.gumroad.com" target="_blank" class="btn-card">Buy now</a>
+        <a href="https://graftwork.gumroad.com/l/ubnkyh" target="_blank" class="btn-card">Buy now</a>
       </div>
     </div>
 
-    <div class="product-card coming-soon">
-      <p class="product-tag">Coming soon</p>
+    <div class="product-card">
+      <p class="product-tag">Google Sheets</p>
       <h3>Shift Handover Form</h3>
       <p>A clear, structured handover record that actually gets filled in. Covers production status, outstanding issues, equipment notes, and next shift priorities.</p>
       <div class="product-footer">
         <span class="product-price"><sup>£</sup>10</span>
-        <span class="btn-card">Coming soon</span>
+        <a href="https://graftwork.gumroad.com/l/hgysvd" target="_blank" class="btn-card">Buy now</a>
       </div>
     </div>
 
-    <div class="product-card coming-soon">
-      <p class="product-tag">Coming soon</p>
+    <div class="product-card">
+      <p class="product-tag">Google Sheets</p>
       <h3>Stock & Inventory Tracker</h3>
       <p>For sole traders and small businesses. Track what you have, what you've used, and what needs reordering — without paying for software you don't need.</p>
       <div class="product-footer">
-        <span class="product-price"><sup>£</sup>10</span>
-        <span class="btn-card">Coming soon</span>
+        <span class="product-price"><sup>£</sup>14</span>
+        <a href="https://graftwork.gumroad.com/l/lnefyn" target="_blank" class="btn-card">Buy now</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <p class="product-tag">Google Sheets · Excel</p>
+      <h3>QC Checklist</h3>
+      <p>Catch problems before they reach the customer. A consistent, repeatable way to inspect products and record outcomes — shift by shift, batch by batch. Pass/Fail/Flag dropdowns, batch and date fields, notes column, and full traceability. Simple enough for the shop floor. Detailed enough to stand behind.</p>
+      <div class="product-footer">
+        <span class="product-price"><sup>£</sup>12</span>
+        <a href="https://graftwork.gumroad.com/l/dnmyrm" target="_blank" class="btn-card">Buy now</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <p class="product-tag">Google Sheets · Excel</p>
+      <h3>SOP Template</h3>
+      <p>Get your processes out of people's heads and onto paper. A clean, professional way to document how tasks get done — so new starters hit the ground running and nothing gets lost when staff change. Includes version control, review dates, approval sign-off, equipment and safety sections. Built for businesses that need structure without bureaucracy.</p>
+      <div class="product-footer">
+        <span class="product-price"><sup>£</sup>11</span>
+        <a href="https://graftwork.gumroad.com/l/fdcphc" target="_blank" class="btn-card">Buy now</a>
       </div>
     </div>
 
