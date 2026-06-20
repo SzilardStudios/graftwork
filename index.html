@@ -343,7 +343,108 @@
   .coming-soon { opacity: 0.5; pointer-events: none; }
   .coming-soon .btn-card { background: var(--slate); color: var(--muted); }
 
-  /* ── WHY GRAFTWORK ── */
+  /* ── PRODUCT CARD IMAGE ── */
+  .product-card-img {
+    width: calc(100% + 56px);
+    margin: -28px -28px 20px;
+    height: 180px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 4px 4px 0 0;
+    display: block;
+  }
+
+  /* ── MODAL ── */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 18, 30, 0.85);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: var(--navy2);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    max-width: 580px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+  }
+  .modal-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 6px 6px 0 0;
+    display: block;
+  }
+  .modal-body { padding: 28px; }
+  .modal-tag {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 10px;
+  }
+  .modal-body h3 {
+    font-family: var(--ff-display);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 14px;
+    line-height: 1.2;
+  }
+  .modal-body p {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 10px;
+  }
+  .modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    margin-top: 10px;
+    border-top: 1px solid var(--rule);
+  }
+  .modal-close {
+    position: absolute;
+    top: 14px; right: 16px;
+    background: rgba(15,28,46,0.7);
+    border: none;
+    color: var(--white);
+    font-size: 1.3rem;
+    cursor: pointer;
+    line-height: 1;
+    border-radius: 50%;
+    width: 32px; height: 32px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .modal-close:hover { background: var(--slate); }
+  .btn-details {
+    background: none;
+    border: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    transition: border-color 0.2s, color 0.2s;
+    font-family: var(--ff-body);
+  }
+  .btn-details:hover { border-color: var(--amber); color: var(--white); }
+
+  /* ── PRODUCT CARD IMAGE ── */
   .why-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -455,7 +556,7 @@
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">GRAFT<span>WORK</span></a>
-  <a href="https://graftwork.gumroad.com" target="_blank" class="nav-cta">Browse products</a>
+  <a href="#products" class="nav-cta">Browse products</a>
 </nav>
 
 <!-- HERO -->
@@ -535,64 +636,64 @@
 <section class="products" id="products">
   <p class="section-label">Products</p>
   <h2 class="section-title">Built for the people who keep things running</h2>
-  <p class="section-intro">One-off purchase. No subscription. Download once, use forever. Available in English — Polish, Romanian, and Arabic versions coming soon.</p>
+  <p class="section-intro">One purchase, no subscription — download it once and it's yours to use whenever you need it. Everything here is built for the people who keep operations moving, not for the people who designed the software they're supposed to use.</p>
 
   <div class="product-grid">
 
     <div class="product-card">
+      <img src="https://graftwork.uk/images/maintenance-log.jpg" alt="Equipment Maintenance Log preview" class="product-card-img">
       <p class="product-tag">Google Sheets</p>
       <h3>Equipment Maintenance Log</h3>
-      <p>Track planned servicing, breakdowns, and inspections in one clean sheet. Dropdown menus, auto-totals, print-ready. Includes a protected version and a fully unlocked version to customise.</p>
+      <p>Track planned servicing, breakdowns, and inspections in one clean sheet. Dropdown menus, auto-totals, print-ready.</p>
       <div class="product-footer">
-        <span class="product-price"><sup>£</sup>12</span>
-        <a href="https://graftwork.gumroad.com/l/ubnkyh" target="_blank" class="btn-card">Buy now</a>
+        <button class="btn-details" onclick="openModal('modal-maintenance')">More details</button>
       </div>
     </div>
 
     <div class="product-card">
+      <img src="https://graftwork.uk/images/handover.jpg" alt="Shift Handover Form preview" class="product-card-img">
       <p class="product-tag">Google Sheets</p>
       <h3>Shift Handover Form</h3>
       <p>A clear, structured handover record that actually gets filled in. Covers production status, outstanding issues, equipment notes, and next shift priorities.</p>
       <div class="product-footer">
-        <span class="product-price"><sup>£</sup>10</span>
-        <a href="https://graftwork.gumroad.com/l/hgysvd" target="_blank" class="btn-card">Buy now</a>
+        <button class="btn-details" onclick="openModal('modal-handover')">More details</button>
       </div>
     </div>
 
     <div class="product-card">
+      <img src="https://graftwork.uk/images/stock-tracker.jpg" alt="Stock & Inventory Tracker preview" class="product-card-img">
       <p class="product-tag">Google Sheets</p>
       <h3>Stock & Inventory Tracker</h3>
-      <p>For sole traders and small businesses. Track what you have, what you've used, and what needs reordering — without paying for software you don't need.</p>
+      <p>Track what you have, what you've used, and what needs reordering — without paying for software you don't need.</p>
       <div class="product-footer">
-        <span class="product-price"><sup>£</sup>14</span>
-        <a href="https://graftwork.gumroad.com/l/lnefyn" target="_blank" class="btn-card">Buy now</a>
+        <button class="btn-details" onclick="openModal('modal-stock')">More details</button>
       </div>
     </div>
 
     <div class="product-card">
+      <img src="https://graftwork.uk/images/qc-checklist.jpg" alt="QC Checklist preview" class="product-card-img">
       <p class="product-tag">Google Sheets · Excel</p>
       <h3>QC Checklist</h3>
-      <p>Catch problems before they reach the customer. A consistent, repeatable way to inspect products and record outcomes — shift by shift, batch by batch. Pass/Fail/Flag dropdowns, batch and date fields, notes column, and full traceability. Simple enough for the shop floor. Detailed enough to stand behind.</p>
+      <p>Catch problems before they reach the customer. Pass/Fail/Flag dropdowns, batch and date fields, notes column, and full traceability.</p>
       <div class="product-footer">
-        <span class="product-price"><sup>£</sup>12</span>
-        <a href="https://graftwork.gumroad.com/l/dnmyrm" target="_blank" class="btn-card">Buy now</a>
+        <button class="btn-details" onclick="openModal('modal-qc')">More details</button>
       </div>
     </div>
 
     <div class="product-card">
+      <img src="https://graftwork.uk/images/sop-template.jpg" alt="SOP Template preview" class="product-card-img">
       <p class="product-tag">Google Sheets · Excel</p>
       <h3>SOP Template</h3>
-      <p>Get your processes out of people's heads and onto paper. A clean, professional way to document how tasks get done — so new starters hit the ground running and nothing gets lost when staff change. Includes version control, review dates, approval sign-off, equipment and safety sections. Built for businesses that need structure without bureaucracy.</p>
+      <p>Get your processes out of people's heads and onto paper. Version control, approval sign-off, equipment and safety sections included.</p>
       <div class="product-footer">
-        <span class="product-price"><sup>£</sup>11</span>
-        <a href="https://graftwork.gumroad.com/l/fdcphc" target="_blank" class="btn-card">Buy now</a>
+        <button class="btn-details" onclick="openModal('modal-sop')">More details</button>
       </div>
     </div>
 
     <div class="product-card" style="border-color: var(--amber);">
       <p class="product-tag">Bundle · All 5 templates</p>
       <h3>Complete Operations Bundle</h3>
-      <p>Everything you need to run a tight, documented operation — shift handovers, equipment maintenance, stock control, quality checks, and written procedures. Five professional templates, built for small manufacturers, logistics teams, and sole traders. <strong style="color:var(--white);">Save £19 vs buying individually.</strong></p>
+      <p>Everything you need to run a tight, documented operation — shift handovers, equipment maintenance, stock control, quality checks, and written procedures. <strong style="color:var(--white);">Save £19 vs buying individually.</strong></p>
       <div class="product-footer">
         <div>
           <span class="product-price"><sup>£</sup>40</span>
@@ -611,7 +712,7 @@
 <section id="why">
   <p class="section-label">Why Graftwork</p>
   <h2 class="section-title">Made by someone who's done the job</h2>
-  <p class="section-intro">Not designed by a consultant. Built by someone with decades of experience — someone who knows what gets used and what gets ignored.</p>
+  <p class="section-intro">These templates weren't designed in a meeting room. They came out of real operational experience — the kind that teaches you what actually gets used and what quietly gets ignored after the first week.</p>
 
   <div class="why-grid">
     <div class="why-item">
@@ -619,7 +720,7 @@
         <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
       </div>
       <h4>Works in Google Sheets</h4>
-      <p>Free software you already have. No Office licence, no subscription, no installation. Open it on your phone, your laptop, or the office PC.</p>
+      <p>Google Sheets is free, familiar, and already on your phone. No licence to buy, nothing to install — just open it on whatever device you've got and get started.</p>
     </div>
     <div class="why-item">
       <div class="why-icon">
@@ -669,6 +770,119 @@
   <span class="logo">GRAFT<span>WORK</span></span>
   <p>© 2025 Graftwork — graftwork.uk — Licensed products for single-business use.</p>
 </footer>
+
+<!-- MODALS -->
+<div class="modal-overlay" id="modal-maintenance" onclick="closeModalOnOverlay(event, 'modal-maintenance')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-maintenance')">✕</button>
+    <img src="https://graftwork.uk/images/maintenance-log.jpg" alt="Equipment Maintenance Log" class="modal-img">
+    <div class="modal-body">
+      <p class="modal-tag">Google Sheets</p>
+      <h3>Equipment Maintenance Log</h3>
+      <p>Track planned servicing, breakdowns, and inspections in one place. Built for small manufacturers and maintenance teams who need a simple, reliable record — not a system that takes longer to fill in than the job itself.</p>
+      <p>Dropdown menus for maintenance type and status, auto-totals, 100-row log, and an instructions sheet included. Print-ready layout.</p>
+      <p>Includes a protected version (prevents accidental edits) and a fully unlocked version to customise. Works in Google Sheets and Microsoft Excel.</p>
+      <div class="modal-footer">
+        <span class="product-price"><sup>£</sup>12</span>
+        <a href="https://graftwork.gumroad.com/l/ubnkyh" target="_blank" class="btn-card">Buy now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-handover" onclick="closeModalOnOverlay(event, 'modal-handover')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-handover')">✕</button>
+    <img src="https://graftwork.uk/images/handover.jpg" alt="Shift Handover Form" class="modal-img">
+    <div class="modal-body">
+      <p class="modal-tag">Google Sheets</p>
+      <h3>Shift Handover Form</h3>
+      <p>A clear, structured handover record that actually gets filled in. Two-part outgoing/incoming structure covering production status, outstanding issues, equipment notes, safety, staffing, and sign-offs.</p>
+      <p>Keeps shift transitions clean and accountable — so nothing gets missed and nobody can say they weren't told.</p>
+      <p>Includes a protected version and a fully unlocked version to customise. Works in Google Sheets and Microsoft Excel.</p>
+      <div class="modal-footer">
+        <span class="product-price"><sup>£</sup>10</span>
+        <a href="https://graftwork.gumroad.com/l/hgysvd" target="_blank" class="btn-card">Buy now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-stock" onclick="closeModalOnOverlay(event, 'modal-stock')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-stock')">✕</button>
+    <img src="https://graftwork.uk/images/stock-tracker.jpg" alt="Stock & Inventory Tracker" class="modal-img">
+    <div class="modal-body">
+      <p class="modal-tag">Google Sheets</p>
+      <h3>Stock & Inventory Tracker</h3>
+      <p>For sole traders and small businesses. Track what you have, what you've used, and what needs reordering — without paying for software you don't need.</p>
+      <p>Item register, stock movement log, and summary dashboard. Live reorder alerts, auto-calculated stock values, and a full audit trail so you always know where things stand.</p>
+      <p>Includes a protected version and a fully unlocked version to customise. Works in Google Sheets and Microsoft Excel.</p>
+      <div class="modal-footer">
+        <span class="product-price"><sup>£</sup>14</span>
+        <a href="https://graftwork.gumroad.com/l/lnefyn" target="_blank" class="btn-card">Buy now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-qc" onclick="closeModalOnOverlay(event, 'modal-qc')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-qc')">✕</button>
+    <img src="https://graftwork.uk/images/qc-checklist.jpg" alt="QC Checklist" class="modal-img">
+    <div class="modal-body">
+      <p class="modal-tag">Google Sheets · Excel</p>
+      <h3>QC Checklist</h3>
+      <p>Catch problems before they reach the customer. A consistent, repeatable way to inspect products and record outcomes — shift by shift, batch by batch.</p>
+      <p>Configurable checklist rows, Pass/Fail/Flag dropdowns, batch and date fields for full traceability, and a notes column for faults and follow-up actions. Simple enough for the shop floor. Detailed enough to stand behind.</p>
+      <p>Includes a protected version and a fully unlocked version to customise. Works in Google Sheets and Microsoft Excel.</p>
+      <div class="modal-footer">
+        <span class="product-price"><sup>£</sup>12</span>
+        <a href="https://graftwork.gumroad.com/l/dnmyrm" target="_blank" class="btn-card">Buy now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-sop" onclick="closeModalOnOverlay(event, 'modal-sop')">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-sop')">✕</button>
+    <img src="https://graftwork.uk/images/sop-template.jpg" alt="SOP Template" class="modal-img">
+    <div class="modal-body">
+      <p class="modal-tag">Google Sheets · Excel</p>
+      <h3>SOP Template</h3>
+      <p>Get your processes out of people's heads and onto paper. A clean, professional way to document how tasks get done — so new starters hit the ground running and nothing gets lost when staff change.</p>
+      <p>Includes an SOP register to track all your procedures, plus a detailed template with step-by-step layout, version control, review dates, approval sign-off, equipment required, and safety notes. Pre-filled with examples to get you started.</p>
+      <p>Includes a protected version and a fully unlocked version to customise. Works in Google Sheets and Microsoft Excel.</p>
+      <div class="modal-footer">
+        <span class="product-price"><sup>£</sup>11</span>
+        <a href="https://graftwork.gumroad.com/l/fdcphc" target="_blank" class="btn-card">Buy now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openModal(id) {
+    document.getElementById(id).classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(id) {
+    document.getElementById(id).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function closeModalOnOverlay(e, id) {
+    if (e.target === e.currentTarget) closeModal(id);
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.open').forEach(m => {
+        m.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    }
+  });
+</script>
 
 </body>
 </html>
