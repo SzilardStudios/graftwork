@@ -207,15 +207,15 @@
   .howto-toggle {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 18px 0;
+    padding: 24px 0;
     color: var(--muted);
     font-family: var(--ff-body);
-    font-size: 0.88rem;
-    font-weight: 500;
+    font-size: 1.05rem;
+    font-weight: 600;
     letter-spacing: 0.02em;
     transition: color 0.2s;
     width: 100%;
@@ -223,7 +223,7 @@
   }
   .howto-toggle:hover { color: var(--white); }
   .howto-toggle svg {
-    width: 16px; height: 16px;
+    width: 22px; height: 22px;
     stroke: currentColor; fill: none; stroke-width: 2;
     flex-shrink: 0;
     transition: transform 0.25s;
@@ -659,55 +659,6 @@
   </div>
 </div>
 
-<!-- HOW TO USE GOOGLE SHEETS -->
-<div class="howto-wrap">
-  <button class="howto-toggle" onclick="this.classList.toggle('open'); document.getElementById('howto-body').classList.toggle('open');" aria-expanded="false">
-    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
-    How to use a Google Sheets template
-    <svg viewBox="0 0 24 24" style="margin-left:auto"><path d="M6 9l6 6 6-6"/></svg>
-  </button>
-  <div class="howto-body" id="howto-body">
-    <div class="howto-steps">
-      <div class="howto-step">
-        <span class="howto-num">1</span>
-        <div>
-          <h5>Purchase &amp; download</h5>
-          <p>After buying on Gumroad, you'll receive a download link. Save the file to your computer — it'll be a <strong>.xlsx</strong> file.</p>
-        </div>
-      </div>
-      <div class="howto-step">
-        <span class="howto-num">2</span>
-        <div>
-          <h5>Open Google Sheets</h5>
-          <p>Go to <strong>sheets.google.com</strong> in your browser. Sign in with any Google account — Gmail counts. It's completely free.</p>
-        </div>
-      </div>
-      <div class="howto-step">
-        <span class="howto-num">3</span>
-        <div>
-          <h5>Upload the file</h5>
-          <p>Click <strong>File → Import</strong>, then drag in the downloaded file. Choose "Replace spreadsheet" and click Import.</p>
-        </div>
-      </div>
-      <div class="howto-step">
-        <span class="howto-num">4</span>
-        <div>
-          <h5>Make it yours</h5>
-          <p>Add your company name, logo, or tweak any field to suit your needs. The <strong>unlocked version</strong> included in your download gives you full flexibility to customise. Prefer us to handle it? Just <a href="#contact" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--amber);">get in touch</a> and let us know what you need — we're happy to make the changes for you.</p>
-        </div>
-      </div>
-      <div class="howto-step">
-        <span class="howto-num">5</span>
-        <div>
-          <h5>Share with your team</h5>
-          <p>Hit the <strong>Share</strong> button in the top-right corner. Add your team by email, or copy a link — they can view or edit from any device.</p>
-        </div>
-      </div>
-    </div>
-    <p class="howto-note">No Google account? You can also open the .xlsx file directly in Microsoft Excel or LibreOffice if you prefer.</p>
-  </div>
-</div>
-
 <!-- PRODUCTS -->
 <section class="products" id="products">
   <p class="section-label">Products</p>
@@ -1015,6 +966,55 @@
     <p>If you have a Google account, you're ready. That's it.</p>
   </div>
 </section>
+
+<!-- HOW TO USE GOOGLE SHEETS -->
+<div class="howto-wrap">
+  <button class="howto-toggle" onclick="this.classList.toggle('open'); document.getElementById('howto-body').classList.toggle('open');" aria-expanded="false">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+    How to use a Google Sheets template
+    <svg viewBox="0 0 24 24" style="margin-left:auto"><path d="M6 9l6 6 6-6"/></svg>
+  </button>
+  <div class="howto-body" id="howto-body">
+    <div class="howto-steps">
+      <div class="howto-step">
+        <span class="howto-num">1</span>
+        <div>
+          <h5>Purchase &amp; download</h5>
+          <p>After buying on Gumroad, you'll receive a download link. Save the file to your computer — it'll be a <strong>.xlsx</strong> file.</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <span class="howto-num">2</span>
+        <div>
+          <h5>Open Google Sheets</h5>
+          <p>Go to <strong>sheets.google.com</strong> in your browser. Sign in with any Google account — Gmail counts. It's completely free.</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <span class="howto-num">3</span>
+        <div>
+          <h5>Upload the file</h5>
+          <p>Click <strong>File → Import</strong>, then drag in the downloaded file. Choose "Replace spreadsheet" and click Import.</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <span class="howto-num">4</span>
+        <div>
+          <h5>Make it yours</h5>
+          <p>Add your company name, logo, or tweak any field to suit your needs. The <strong>unlocked version</strong> included in your download gives you full flexibility to customise. Prefer us to handle it? Just <a href="#contact" style="color:var(--amber);text-decoration:none;border-bottom:1px solid var(--amber);">get in touch</a> and let us know what you need — we're happy to make the changes for you.</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <span class="howto-num">5</span>
+        <div>
+          <h5>Share with your team</h5>
+          <p>Hit the <strong>Share</strong> button in the top-right corner. Add your team by email, or copy a link — they can view or edit from any device.</p>
+        </div>
+      </div>
+    </div>
+    <p class="howto-note">No Google account? You can also open the .xlsx file directly in Microsoft Excel or LibreOffice if you prefer.</p>
+  </div>
+</div>
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
