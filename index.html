@@ -44,6 +44,13 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  /* ── CENTRED CONTAINER ── */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+  }
+
   /* ── NAV ── */
   nav {
     position: sticky; top: 0; z-index: 100;
@@ -90,6 +97,7 @@
     align-items: center;
     gap: 60px;
     max-width: 1200px;
+    margin: 0 auto;
   }
   .hero-text { max-width: 620px; }
   .hero-logo-large {
@@ -160,6 +168,7 @@
     padding: 22px 5%;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 16px;
     flex-wrap: wrap;
   }
@@ -188,6 +197,12 @@
     background: var(--navy2);
     border-bottom: 1px solid var(--rule);
     padding: 0 5%;
+    max-width: 100%;
+  }
+  .howto-wrap > * {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .howto-toggle {
     display: flex;
@@ -262,7 +277,19 @@
   }
 
   /* ── SECTION WRAPPER ── */
-  section { padding: 72px 5%; }
+  section {
+    padding: 72px 5%;
+  }
+  section > *:not(.product-grid) {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section > .product-grid {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .section-label {
     font-size: 0.72rem;
     font-weight: 600;
@@ -270,6 +297,7 @@
     text-transform: uppercase;
     color: var(--amber);
     margin-bottom: 14px;
+    text-align: center;
   }
   .section-title {
     font-family: var(--ff-display);
@@ -278,13 +306,17 @@
     color: var(--white);
     line-height: 1.15;
     margin-bottom: 16px;
+    text-align: center;
   }
   .section-intro {
     color: var(--body);
-    max-width: 560px;
+    max-width: 640px;
     font-size: 1rem;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 48px;
     line-height: 1.7;
+    text-align: center;
   }
 
   /* ── PRODUCTS ── */
@@ -485,6 +517,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   .why-item {}
   .why-icon {
@@ -556,9 +590,11 @@
     padding: 24px 5%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 16px;
+    text-align: center;
+    flex-direction: column;
   }
   footer .logo {
     font-family: var(--ff-display);
@@ -582,8 +618,8 @@
 
   @media (max-width: 600px) {
     .hero { padding: 56px 5% 48px; }
-    .free-strip { flex-direction: column; align-items: flex-start; }
-    footer { flex-direction: column; align-items: flex-start; }
+    .free-strip { flex-direction: column; align-items: center; }
+    footer { flex-direction: column; align-items: center; }
   }
 </style>
 </head>
