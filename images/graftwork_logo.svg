@@ -1,0 +1,59 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <title>Graftwork logo</title>
+  <desc>Industrial badge logo for Graftwork featuring crossed adjustable wrenches, a gear, and the brand name in a hexagonal stamp-style badge.</desc>
+
+  <g transform="translate(200, 200)">
+
+    <polygon points="0,-190 164.5,-95 164.5,95 0,190 -164.5,95 -164.5,-95"
+      fill="#f0ebe0" />
+
+    <polygon points="0,-180 155.9,-90 155.9,90 0,180 -155.9,90 -155.9,-90"
+      fill="#1c1c1c" />
+
+    <polygon points="0,-170 147.2,-85 147.2,85 0,170 -147.2,85 -147.2,-85"
+      fill="none" stroke="#f0ebe0" stroke-width="2" stroke-dasharray="6,4" />
+
+    <g transform="rotate(-35) translate(-18, -18)">
+      <rect x="0" y="6" width="80" height="24" rx="4" fill="#f0ebe0"/>
+      <rect x="2" y="9" width="76" height="18" rx="3" fill="#1c1c1c" stroke="#f0ebe0" stroke-width="1.5"/>
+      <rect x="24" y="6" width="32" height="10" rx="3" fill="#f0ebe0"/>
+      <rect x="28" y="2" width="24" height="12" rx="3" fill="#f0ebe0"/>
+      <circle cx="8" cy="18" r="6" fill="#f0ebe0"/>
+      <circle cx="8" cy="18" r="3" fill="#1c1c1c"/>
+      <rect x="-8" y="15" width="16" height="6" rx="2" fill="#f0ebe0"/>
+    </g>
+
+    <g transform="rotate(145) translate(-18, -18)">
+      <rect x="0" y="6" width="80" height="24" rx="4" fill="#f0ebe0"/>
+      <rect x="2" y="9" width="76" height="18" rx="3" fill="#1c1c1c" stroke="#f0ebe0" stroke-width="1.5"/>
+      <rect x="24" y="6" width="32" height="10" rx="3" fill="#f0ebe0"/>
+      <rect x="28" y="2" width="24" height="12" rx="3" fill="#f0ebe0"/>
+      <circle cx="8" cy="18" r="6" fill="#f0ebe0"/>
+      <circle cx="8" cy="18" r="3" fill="#1c1c1c"/>
+      <rect x="-8" y="15" width="16" height="6" rx="2" fill="#f0ebe0"/>
+    </g>
+
+    <circle cx="0" cy="0" r="32" fill="#f0ebe0"/>
+    <circle cx="0" cy="0" r="26" fill="#1c1c1c"/>
+    <circle cx="0" cy="0" r="12" fill="#f0ebe0"/>
+    <circle cx="0" cy="0" r="6" fill="#1c1c1c"/>
+
+    <polygon points="0,-26 5,-18 14,-18 7,-12 10,-3 0,-9 -10,-3 -7,-12 -14,-18 -5,-18" fill="#f0ebe0"/>
+
+    <line x1="-90" y1="78" x2="90" y2="78" stroke="#f0ebe0" stroke-width="1" opacity="0.6"/>
+    <line x1="-90" y1="85" x2="90" y2="85" stroke="#f0ebe0" stroke-width="0.5" opacity="0.4"/>
+
+    <text x="0" y="72" text-anchor="middle"
+      style="font-family: Arial, sans-serif; font-size: 30px; font-weight: bold; letter-spacing: 7px; fill: #f0ebe0;">GRAFTWORK</text>
+
+    <text x="0" y="108" text-anchor="middle"
+      style="font-family: Arial, sans-serif; font-size: 10px; letter-spacing: 3.5px; fill: #a09070;">TOOLS &amp; TEMPLATES</text>
+
+    <text x="0" y="-108" text-anchor="middle"
+      style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; letter-spacing: 3px; fill: #c8b898;">GRAFTWORK.UK</text>
+
+    <line x1="-62" y1="-116" x2="-75" y2="-116" stroke="#a09070" stroke-width="0.8"/>
+    <line x1="62" y1="-116" x2="75" y2="-116" stroke="#a09070" stroke-width="0.8"/>
+  </g>
+
+</svg>
