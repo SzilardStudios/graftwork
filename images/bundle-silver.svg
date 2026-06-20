@@ -1,0 +1,74 @@
+<svg width="1208" height="830" viewBox="0 0 1208 830" xmlns="http://www.w3.org/2000/svg">
+  <title>Core Operations Bundle – Silver</title>
+
+  <!-- Background -->
+  <rect width="1208" height="830" fill="#0f1c2e"/>
+
+  <!-- Subtle grid texture -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e3050" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="1208" height="830" fill="url(#grid)" opacity="0.5"/>
+
+  <!-- Silver badge logo centred -->
+  <g transform="translate(604, 360)">
+
+    <polygon points="0,-190 164.5,-95 164.5,95 0,190 -164.5,95 -164.5,-95"
+      fill="#a8b4c0" />
+
+    <polygon points="0,-180 155.9,-90 155.9,90 0,180 -155.9,90 -155.9,-90"
+      fill="#0f1c2e" />
+
+    <polygon points="0,-170 147.2,-85 147.2,85 0,170 -147.2,85 -147.2,-85"
+      fill="none" stroke="#c8d4e0" stroke-width="2" stroke-dasharray="6,4" />
+
+    <g transform="rotate(-35) translate(-18, -18)">
+      <rect x="0" y="6" width="80" height="24" rx="4" fill="#c8d4e0"/>
+      <rect x="2" y="9" width="76" height="18" rx="3" fill="#0f1c2e" stroke="#c8d4e0" stroke-width="1.5"/>
+      <rect x="24" y="6" width="32" height="10" rx="3" fill="#c8d4e0"/>
+      <rect x="28" y="2" width="24" height="12" rx="3" fill="#c8d4e0"/>
+      <circle cx="8" cy="18" r="6" fill="#c8d4e0"/>
+      <circle cx="8" cy="18" r="3" fill="#0f1c2e"/>
+      <rect x="-8" y="15" width="16" height="6" rx="2" fill="#c8d4e0"/>
+    </g>
+
+    <g transform="rotate(145) translate(-18, -18)">
+      <rect x="0" y="6" width="80" height="24" rx="4" fill="#c8d4e0"/>
+      <rect x="2" y="9" width="76" height="18" rx="3" fill="#0f1c2e" stroke="#c8d4e0" stroke-width="1.5"/>
+      <rect x="24" y="6" width="32" height="10" rx="3" fill="#c8d4e0"/>
+      <rect x="28" y="2" width="24" height="12" rx="3" fill="#c8d4e0"/>
+      <circle cx="8" cy="18" r="6" fill="#c8d4e0"/>
+      <circle cx="8" cy="18" r="3" fill="#0f1c2e"/>
+      <rect x="-8" y="15" width="16" height="6" rx="2" fill="#c8d4e0"/>
+    </g>
+
+    <circle cx="0" cy="0" r="32" fill="#c8d4e0"/>
+    <circle cx="0" cy="0" r="26" fill="#0f1c2e"/>
+    <circle cx="0" cy="0" r="12" fill="#c8d4e0"/>
+    <circle cx="0" cy="0" r="6" fill="#0f1c2e"/>
+
+    <polygon points="0,-26 5,-18 14,-18 7,-12 10,-3 0,-9 -10,-3 -7,-12 -14,-18 -5,-18" fill="#c8d4e0"/>
+
+    <line x1="-90" y1="78" x2="90" y2="78" stroke="#c8d4e0" stroke-width="1" opacity="0.6"/>
+    <line x1="-90" y1="85" x2="90" y2="85" stroke="#c8d4e0" stroke-width="0.5" opacity="0.4"/>
+
+    <text x="0" y="72" text-anchor="middle"
+      style="font-family: Arial, sans-serif; font-size: 30px; font-weight: bold; letter-spacing: 7px; fill: #c8d4e0;">GRAFTWORK</text>
+
+    <text x="0" y="108" text-anchor="middle"
+      style="font-family: Arial, sans-serif; font-size: 10px; letter-spacing: 3.5px; fill: #a8b4c0;">TOOLS &amp; TEMPLATES</text>
+
+    <text x="0" y="-108" text-anchor="middle"
+      style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; letter-spacing: 3px; fill: #c8d4e0;">GRAFTWORK.UK</text>
+
+    <line x1="-62" y1="-116" x2="-75" y2="-116" stroke="#a8b4c0" stroke-width="0.8"/>
+    <line x1="62" y1="-116" x2="75" y2="-116" stroke="#a8b4c0" stroke-width="0.8"/>
+  </g>
+
+  <!-- Bundle label at bottom -->
+  <text x="604" y="620" text-anchor="middle"
+    style="font-family: Arial, sans-serif; font-size: 22px; font-weight: bold; letter-spacing: 6px; fill: #a8b4c0;">SILVER BUNDLE</text>
+
+</svg>
