@@ -1,0 +1,57 @@
+<svg width="1208" height="830" viewBox="0 0 1208 830" xmlns="http://www.w3.org/2000/svg">
+  <title>Complete Graftwork Pack – Platinum</title>
+  <rect width="1208" height="830" fill="#0f1c2e"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e3050" stroke-width="0.5"/>
+    </pattern>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c8e0f0" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#c8e0f0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="plat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8f0f8"/>
+      <stop offset="35%" stop-color="#b0c8e0"/>
+      <stop offset="65%" stop-color="#d8eaf8"/>
+      <stop offset="100%" stop-color="#90aac8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1208" height="830" fill="url(#grid)" opacity="0.5"/>
+  <ellipse cx="604" cy="360" rx="340" ry="320" fill="url(#glow)"/>
+  <g transform="translate(604, 360)">
+    <polygon points="0,-190 164.5,-95 164.5,95 0,190 -164.5,95 -164.5,-95" fill="url(#plat)"/>
+    <polygon points="0,-180 155.9,-90 155.9,90 0,180 -155.9,90 -155.9,-90" fill="#0f1c2e"/>
+    <polygon points="0,-170 147.2,-85 147.2,85 0,170 -147.2,85 -147.2,-85" fill="none" stroke="#b8d0e8" stroke-width="2" stroke-dasharray="6,4"/>
+    <g transform="rotate(-35) translate(-18, -18)">
+      <rect x="0" y="6" width="80" height="24" rx="4" fill="#d8eaf8"/>
+      <rect x="2" y="9" width="76" height="18" rx="3" fill="#0f1c2e" stroke="#b8d0e8" stroke-width="1.5"/>
+      <rect x="24" y="6" width="32" height="10" rx="3" fill="#d8eaf8"/>
+      <rect x="28" y="2" width="24" height="12" rx="3" fill="#d8eaf8"/>
+      <circle cx="8" cy="18" r="6" fill="#d8eaf8"/>
+      <circle cx="8" cy="18" r="3" fill="#0f1c2e"/>
+      <rect x="-8" y="15" width="16" height="6" rx="2" fill="#d8eaf8"/>
+    </g>
+    <g transform="rotate(145) translate(-18, -18)">
+      <rect x="0" y="6" width="80" height="24" rx="4" fill="#d8eaf8"/>
+      <rect x="2" y="9" width="76" height="18" rx="3" fill="#0f1c2e" stroke="#b8d0e8" stroke-width="1.5"/>
+      <rect x="24" y="6" width="32" height="10" rx="3" fill="#d8eaf8"/>
+      <rect x="28" y="2" width="24" height="12" rx="3" fill="#d8eaf8"/>
+      <circle cx="8" cy="18" r="6" fill="#d8eaf8"/>
+      <circle cx="8" cy="18" r="3" fill="#0f1c2e"/>
+      <rect x="-8" y="15" width="16" height="6" rx="2" fill="#d8eaf8"/>
+    </g>
+    <circle cx="0" cy="0" r="32" fill="#d8eaf8"/>
+    <circle cx="0" cy="0" r="26" fill="#0f1c2e"/>
+    <circle cx="0" cy="0" r="12" fill="#d8eaf8"/>
+    <circle cx="0" cy="0" r="6" fill="#0f1c2e"/>
+    <polygon points="0,-26 5,-18 14,-18 7,-12 10,-3 0,-9 -10,-3 -7,-12 -14,-18 -5,-18" fill="#d8eaf8"/>
+    <line x1="-90" y1="78" x2="90" y2="78" stroke="#b8d0e8" stroke-width="1" opacity="0.6"/>
+    <line x1="-90" y1="85" x2="90" y2="85" stroke="#b8d0e8" stroke-width="0.5" opacity="0.4"/>
+    <text x="0" y="72" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 30px; font-weight: bold; letter-spacing: 7px; fill: #d8eaf8;">GRAFTWORK</text>
+    <text x="0" y="108" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; letter-spacing: 3.5px; fill: #90aac8;">TOOLS &amp; TEMPLATES</text>
+    <text x="0" y="-108" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; letter-spacing: 3px; fill: #d8eaf8;">GRAFTWORK.UK</text>
+    <line x1="-62" y1="-116" x2="-75" y2="-116" stroke="#90aac8" stroke-width="0.8"/>
+    <line x1="62" y1="-116" x2="75" y2="-116" stroke="#90aac8" stroke-width="0.8"/>
+  </g>
+  <text x="604" y="620" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 22px; font-weight: bold; letter-spacing: 6px; fill: #d8eaf8;">PLATINUM BUNDLE</text>
+</svg>
